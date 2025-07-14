@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Swift Track</title>
+  <link rel="stylesheet" href="css/styles.css" />
+   <link rel="stylesheet" href="animations/scrollCue.css">
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <header>
+    <div class="logo">Swift Track</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="track.html">Track</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="testimonial.html">Testimonials</a>
+      <a href="faq.html">FAQs</a>
+      <a href="newsletter.html">Newsletter</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p>We're here to help with your tracking and delivery questions.</p>
+  </section>
+
+  <section class="contact-form-section">
+    <div class="container">
+      <form id="contactForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="form-response" id="formResponse"></div>
+    </div></section>
+
+  <footer>
+    &copy; 2025 Swift Track. All rights reserved.
+  </footer>
+
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const response = document.getElementById('formResponse');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      response.textContent = 'Thank you for contacting Swift Track. We’ll reply shortly.';
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
+```

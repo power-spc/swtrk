@@ -1,0 +1,33 @@
+/* Base animation styles */
+.scrollcue {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+/* Triggered when element becomes visible */
+.scrollcue.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional variations */
+.scrollcue.fade {
+  transform: none;
+}
+
+.scrollcue.slide-left {
+  transform: translateX(-40px);
+}
+
+.scrollcue.slide-right {
+  transform: translateX(40px);
+}
+
+.scrollcue.zoom {
+  transform: scale(0.85);
+}
+
+.scrollcue.visible.zoom {
+  transform: scale(1);
+}

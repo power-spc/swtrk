@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Track Package | Swift Track</title>
+  <link rel="stylesheet" href="css/styles.css" />
+   <link rel="stylesheet" href="animations/scrollCue.css">
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <header>
+    <div class="logo">Swift Track</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="track.html">Track</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="testimonial.html">Testimonials</a>
+      <a href="faq.html">FAQs</a>
+      <a href="newsletter.html">Newsletter</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Track Your Package</h1>
+    <p>Enter your tracking number to get real-time delivery updates.</p>
+    <form class="tracking-form" id="trackingForm">
+      <input type="text" placeholder="e.g. NG123456789" required />
+      <button type="submit">Track Package</button>
+    </form>
+    <div class="tracking-result" id="trackingResult"></div>
+
+<script>
+  const form = document.getElementById('trackingForm');
+  const result = document.getElementById('trackingResult');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const input = this.querySelector('input').value.trim();
+    if (!input) {
+      result.textContent = 'Please enter a valid tracking number.';
+      return;
+    }
+
+    const countryCode = input.slice(0, 2).toUpperCase();
+    result.textContent = `Tracking input: Package is currently in transit from ${countryCode}.`;
+  });
+</script>
+
+</body>
+</html>

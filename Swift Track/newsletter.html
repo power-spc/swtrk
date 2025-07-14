@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Newsletter | Swift Track</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="animations/scrollCue.css">
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <header>
+    <div class="logo">Swift Track</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="track.html">Track</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="testimonial.html">Testimonials</a>
+      <a href="faq.html">FAQs</a>
+      <a href="newsletter.html">Newsletter</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Subscribe to Our Newsletter</h1>
+    <p>Stay updated with the latest delivery tips, tracking news, and service improvements.</p>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="container">
+      <form id="newsletterForm">
+        <label for="subscriberEmail">Email Address:</label>
+        <input type="email" id="subscriberEmail" name="subscriberEmail" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="form-response" id="newsletterResponse"></div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Swift Track. All rights reserved.
+  </footer>
+
+<script>
+  const form = document.getElementById('newsletterForm');
+  const response = document.getElementById('newsletterResponse');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('subscriberEmail').value.trim();
+
+    if (email) {
+      response.textContent = `Thanks for subscribing, ${email}! We'll keep you posted.`;
+      form.reset();
+    } else {
+      response.textContent = 'Please enter a valid email.';
+    }
+  });
+</script>
+
+</body>
+</html>

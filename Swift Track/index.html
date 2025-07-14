@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Swift Track - Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="animations/scrollCue.css">
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <header>
+    <div class="logo">Swift Track</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="track.html">Track</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+       <a href="testimonial.html">Testimonials</a>
+      <a href="faq.html">FAQs</a>
+      <a href="newsletter.html">Newsletter</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Swift Track</h1>
+    <p>Your reliable package tracking partner worldwide.</p>
+    <form class="tracking-form" id="trackingForm">
+      <input type="text" placeholder="Enter your tracking number" required />
+      <button type="submit">Track Now</button>
+    </form>
+    <div class="tracking-result" id="trackingResult"></div>
+  </section>
+
+  <section class="features">
+    <h2>Why Choose Swift Track?</h2>
+    <ul>
+      <li>Real-time global tracking updates</li>
+      <li>Simple and intuitive interface</li>
+      <li>Accurate location detection via tracking codes</li>
+      <li>Secure and reliable service</li>
+    </ul>
+  </section><footer>
+    &copy; 2025 Swift Track. All rights reserved.
+  </footer>
+
+ <script>
+  const form = document.getElementById('trackingForm');
+  const resultDiv = document.getElementById('trackingResult');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const trackingNum = form.querySelector('input').value.trim();
+    if (!trackingNum) {
+      resultDiv.textContent = 'Please enter a valid tracking number.';
+      return;
+    }
+    // Simulated tracking feedback
+    resultDiv.textContent = `Tracking ${trackingNum}: Package is in transit.`;
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 3px solid red;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 2em;
+  color: yellow;
+  font-weight: bold;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #1e90ff; /* blue */
+}
+
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(to right, rgba(255,0,0,0.4), rgba(0,0,255,0.3)),
+    url('https://images.unsplash.com/photo-1562564055-71e051d33c19') center/cover no-repeat;
+  color: #fff;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: yellow;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin: 10px 0 20px;
+}
+/* FORMS (tracking, contact, newsletter) */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(255,255,255,0.05);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffcc00;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  background: #222;
+  color: #fff;
+}
+
+form button {
+  padding: 12px 25px;
+  background: linear-gradient(45deg, red, yellow);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: linear-gradient(45deg, yellow, red);
+}
+
+/* TRACKING RESULT */
+.tracking-result {
+  text-align: center;
+  margin-top: 20px;
+  color: cyan;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 20px;
+}
+
+/* TESTIMONIALS & FAQ */
+.card {
+  background: #111;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  color: #eee;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+.card .stars {
+  color: gold;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  padding: 20px;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9em;
+  border-top: 2px solid #444;
+}

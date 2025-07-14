@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Testimonials | Swift Track</title>
+  <link rel="stylesheet" href="css/styles.css" />
+   <link rel="stylesheet" href="animations/scrollCue.css">
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <header>
+    <div class="logo">Swift Track</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="track.html">Track</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="testimonial.html">Testimonials</a>
+      <a href="faq.html">FAQs</a>
+      <a href="newsletter.html">Newsletter</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>What Our Customers Say</h1>
+    <p>Real reviews from real Swift Track users.</p>
+  </section>
+
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="testimonial">
+        <p>"Swift Track is incredibly reliable. I tracked my package from Lagos to Berlin without a hitch!"</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <span>- Maria E.</span>
+      </div>
+      <div class="testimonial">
+        <p>"Very user-friendly and accurate. I received updates right on time."</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <span>- James T.</span>
+      </div>
+      <div class="testimonial"><p>"Helped me monitor multiple deliveries for my store. Big thumbs up!"</p>
+        <div class="stars">⭐⭐⭐⭐</div>
+        <span>- Linda C.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="rating-form">
+    <div class="container">
+      <h2>Rate Your Experience</h2>
+      <div class="stars-container" id="stars">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <p id="rating-message"></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Swift Track. All rights reserved.
+  </footer>
+
+  <script>
+  const stars = document.querySelectorAll('.star');
+  const msg = document.getElementById('rating-message');
+
+  stars.forEach((star, index) => {
+    star.addEventListener('click', () => {
+      stars.forEach(s => s.classList.remove('selected'));
+      for (let i = 0; i <= index; i++) {
+        stars[i].classList.add('selected');
+      }
+      const rating = index + 1;
+      msg.textContent = `Thanks for rating us rating star{rating > 1 ? 's' : ''}!`;
+    });
+  });
+</script>
+
+</body>
+</html>
+```
